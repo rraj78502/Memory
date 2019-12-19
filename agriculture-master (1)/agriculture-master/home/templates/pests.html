@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Agrotech{% endblock %}
+{% block body_style %}style="background-image: url({% static 'background.jpg' %});background-size:cover;"
+{% endblock %}
+<style>
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mydiv {
+  width: 80px;
+}
+</style>
+{% block content %}
+ <form action="/home/imagesubmit">
+   <h1>Crop image:</h1> <input type="file" name="file" />
+  <input type="image" src="submit.gif" alt="Submit">
+</form>
+{% endblock %}
